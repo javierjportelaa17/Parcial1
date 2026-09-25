@@ -16,4 +16,4 @@
     <TextField fx:id="txtTelefono" promptText="Teléfono (Para probar nro perfecto)"/>
     <TextField fx:id="txtDescuento" promptText="% Descuento (Ej. 15)"/>
     <Button text="Registrar Matrícula" onAction="#registrarMatriculaAction"/>
-</VBox>'
+</VBox>
