@@ -1,18 +1,19 @@
 package co.edu.uniquindio.modelo;
 
-public class ServicioAdicional {
-    private String codigo;
-    private String nombre;
-    private double precio;
-    private boolean disponible;
+public class ProgramaPersonalizado extends ProgramaFormacion {
+    private int cantidadSesionesTutor;
+    private String nivelIdiomaRequerido;
+    private String objetivosEstudiante;
 
-    public ServicioAdicional(String codigo, String nombre, double precio, boolean disponible) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.disponible = disponible;
+    public ProgramaPersonalizado(String codigo, String nombre, int cupos, double valor, int sesiones, String nivel, String objetivos) {
+        super(codigo, nombre, cupos, valor);
+        this.cantidadSesionesTutor = sesiones;
+        this.nivelIdiomaRequerido = nivel;
+        this.objetivosEstudiante = objetivos;
     }
 
-    public double getPrecio() { return precio; }
-    public String getNombre() { return nombre; }
+    @Override
+    public ProgramaPersonalizado clone() {
+        return (ProgramaPersonalizado) super.clone();
+    }
 }
