@@ -15,5 +15,7 @@ public class Docente {
         this.tarifaPorSesion = tarifaPorSesion;
     }
 
-    public String getNombre() { return nombre; }
+    public String getNombre() {
+        return nombre;
+    }
 }
