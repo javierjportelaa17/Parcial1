@@ -21,6 +21,7 @@ public class Matricula {
         this.descuento = builder.descuento;
         this.fechaInicio = builder.fechaInicio != null ? builder.fechaInicio : LocalDate.now();
     }
+    public Docente getDocenteTutor() { return docenteTutor; }
 
     public int getNumeroMatricula() { return numeroMatricula; }
     public Estudiante getEstudiante() { return estudiante; }

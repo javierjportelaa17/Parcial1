@@ -14,6 +14,6 @@
     <Label text="Registro de Matrícula - LinguaPlus" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
     <TextField fx:id="txtNombre" promptText="Nombre del Estudiante"/>
     <TextField fx:id="txtTelefono" promptText="Teléfono (Para probar nro perfecto)"/>
-    <TextField fx:id="txtDescuento" promptText="% Descuento (Ej. 15)"/>
+    <TextField fx:id="txtDescuento" promptText="Descuento (Ej. 15)"/>
     <Button text="Registrar Matrícula" onAction="#registrarMatriculaAction"/>
 </VBox>
