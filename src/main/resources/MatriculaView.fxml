@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.controlador.MatriculaControlador">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Registro de Matrícula - LinguaPlus" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+    <TextField fx:id="txtNombre" promptText="Nombre del Estudiante"/>
+    <TextField fx:id="txtDocumento" promptText="Documento"/>
+    <TextField fx:id="txtTelefono" promptText="Teléfono (Para probar nro perfecto)"/>
+    <ComboBox fx:id="cmbPrograma" promptText="Programa" maxWidth="Infinity"/>
+    <ComboBox fx:id="cmbDocente" promptText="Docente tutor (solo personalizado)" maxWidth="Infinity"/>
+    <ComboBox fx:id="cmbServicio" promptText="Servicio adicional (opcional)" maxWidth="Infinity"/>
+    <TextField fx:id="txtDescuento" promptText="Descuento (Ej. 15)"/>
+    <HBox spacing="10.0">
+        <ComboBox fx:id="cmbModalidad"/>
+        <ComboBox fx:id="cmbFormato"/>
+        <Button text="Registrar Matrícula" onAction="#registrarMatriculaAction"/>
+    </HBox>
+    <Label fx:id="lblCupos"/>
+    <ListView fx:id="lstMatriculas" prefHeight="90.0"/>
+
+    <Separator/>
+    <Label text="Consultar estudiante por teléfono" style="-fx-font-weight: bold;"/>
+    <HBox spacing="10.0">
+        <TextField fx:id="txtBuscarTelefono" promptText="Teléfono"/>
+        <Button text="Buscar" onAction="#buscarPorTelefonoAction"/>
+    </HBox>
+
+    <Separator/>
+    <Label text="Ingresos por periodo" style="-fx-font-weight: bold;"/>
+    <HBox spacing="10.0">
+        <DatePicker fx:id="dpDesde" promptText="Desde" prefWidth="130.0"/>
+        <DatePicker fx:id="dpHasta" promptText="Hasta" prefWidth="130.0"/>
+        <Button text="Calcular" onAction="#calcularIngresosAction"/>
+    </HBox>
+</VBox>
